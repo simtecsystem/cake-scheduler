@@ -1,5 +1,5 @@
 {
-    "name": "watchowl/cake-scheduler",
+    "name": "Fiste788/cake-scheduler",
     "description": "Cron Scheduler for CakePHP 3",
     "type": "cakephp-plugin",
     "require": {
@@ -18,12 +18,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "WatchOwl\\CakeScheduler\\": "src"
+            "CakeScheduler\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WatchOwl\\CakeScheduler\\Test\\": "tests"
+            "CakeScheduler\\Test\\": "tests"
         }
     }
 }
