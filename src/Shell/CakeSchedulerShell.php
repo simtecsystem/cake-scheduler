@@ -46,13 +46,13 @@ class CakeSchedulerShell extends Shell
 
     public function run()
     {
-        echo shell_exec('./vendor/bin/crunz schedule:run ./schedule');
+        echo shell_exec('"./vendor/bin/crunz" schedule:run ./schedule');
         echo PHP_EOL;
     }
 
     public function view()
     {
-        echo shell_exec('./vendor/bin/crunz schedule:list ./schedule');
+        echo shell_exec('"./vendor/bin/crunz" schedule:list ./schedule');
         echo PHP_EOL;
     }
 }
