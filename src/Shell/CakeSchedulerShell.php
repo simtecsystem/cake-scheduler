@@ -6,7 +6,7 @@
  * Time: 7:32 PM
  */
 
-namespace WatchOwl\CakeScheduler\Shell;
+namespace CakeScheduler\Shell;
 
 use Cake\Console\Shell;
 
