@@ -6,7 +6,7 @@
  * Time: 7:32 PM
  */
 
-namespace WatchOwl\CakeScheduler\Schedule;
+namespace CakeScheduler\Schedule;
 
 use Crunz\Schedule;
 
