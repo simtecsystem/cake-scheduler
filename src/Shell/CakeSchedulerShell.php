@@ -9,6 +9,9 @@
 namespace CakeScheduler\Shell;
 
 use Cake\Console\Shell;
+use Crunz\Console\CommandKernel;
+use Crunz\ErrorHandler;
+use Symfony\Component\Console\Input\ArgvInput;
 
 /**
  * CakeScheduler shell command.
@@ -46,13 +49,19 @@ class CakeSchedulerShell extends Shell
 
     public function run()
     {
-        echo shell_exec('"./vendor/bin/crunz" schedule:run ./schedule');
+        echo $this->runCrunzCommand(new ArgvInput(['crunz', 'schedule:run', './schedule']));
         echo PHP_EOL;
     }
 
     public function view()
     {
-        echo shell_exec('"./vendor/bin/crunz" schedule:list ./schedule');
+        echo $this->runCrunzCommand(new ArgvInput(['crunz', 'schedule:list', './schedule']));
         echo PHP_EOL;
+    }
+    
+    private function runCrunzCommand(ArgvInput $input) {
+        ErrorHandler::getInstance()->set();
+        $kernel = new CommandKernel('Crunz Command Line Interface', 'v1.4.0');
+        $kernel->run($input);
     }
 }
