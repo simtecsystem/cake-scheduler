@@ -14,7 +14,7 @@ class CakeSchedule extends Schedule
 {
     public function shell($command)
     {
-        return $this->run('./bin/cake ' . $command);
+        return $this->run(ROOT . DS . 'bin' . DS . 'cake ' . $command);
     }
 
     public function run($command, array $parameters = [])
