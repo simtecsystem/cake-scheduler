@@ -71,6 +71,7 @@ class CakeSchedulerShell extends Shell
     }
     
     private function runCrunzCommand(InputInterface $input) {
+        setbase(ROOT);
         ErrorHandler::getInstance()->set();
         $kernel = new CommandKernel('Crunz Command Line Interface', 'v1.4.0');
         $kernel->run($input);
