@@ -10,7 +10,6 @@ namespace CakeScheduler\Shell;
 
 use Cake\Console\Shell;
 use Crunz\Console\CommandKernel;
-use Crunz\ErrorHandler;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Input\InputInterface;
 
@@ -72,7 +71,7 @@ class CakeSchedulerShell extends Shell
     
     private function runCrunzCommand(InputInterface $input) {
         setbase(ROOT);
-        ErrorHandler::getInstance()->set();
+        define('CRUNZ_ROOT', ROOT . DS . 'vendor' . DS . 'lavary' . DS . 'crunz' . DS);
         $kernel = new CommandKernel('Crunz Command Line Interface', 'v1.4.0');
         $kernel->run($input);
     }
