@@ -8,13 +8,14 @@
 
 namespace CakeScheduler\Schedule;
 
+use Cake\Core\Configure;
 use Crunz\Schedule;
 
 class CakeSchedule extends Schedule
 {
     public function shell($command)
     {
-        return $this->run(ROOT . DS . 'bin' . DS . 'cake ' . $command);
+        return $this->run(Configure::read('CakeScheduler.phpBinary') . ' ' . ROOT . DS . 'bin' . DS . 'cake ' . $command);
     }
 
     public function run($command, array $parameters = [])
