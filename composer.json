@@ -4,7 +4,7 @@
     "type": "cakephp-plugin",
     "require": {
         "cakephp/cakephp": "~3.5",
-        "lavary/crunz": "~1.4"
+        "lavary/crunz": "~2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7|^6.0"
