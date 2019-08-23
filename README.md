@@ -31,7 +31,7 @@ them to production just like any other PHP code.
 
 + To install the CakeScheduler plugin, you can use composer. From your application's ROOT directory (where composer.json file is located) run the following:
 
-    ```composer require watchowl/cake-scheduler```
+    ```composer require simtecsystem/cake-scheduler```
 
 + You will need to add the following line to your application's `config/bootstrap.php` file:
 
