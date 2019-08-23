@@ -1,5 +1,5 @@
 {
-    "name": "fiste788/cake-scheduler",
+    "name": "simtecsystem/cake-scheduler",
     "description": "Cron Scheduler for CakePHP 3",
     "type": "cakephp-plugin",
     "require": {
