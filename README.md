@@ -35,8 +35,10 @@ them to production just like any other PHP code.
 
 + You will need to add the following line to your application's `config/bootstrap.php` file:
 
-    ```Plugin::load('Watchowl/CakeScheduler');```
+    ```Plugin::load('CakeScheduler');```
 
++ You have to export an Cruz Configuration via
+```vendor/lavary/crunz/crunz publish:config```
     
 ## Starting The Scheduler
 
@@ -47,13 +49,12 @@ This cron job will enable CakeScheduler to schedule all the subsequent jobs:
 
 ## Defining Schedules
 A schedule is basically a PHP file ending with **Tasks.php** and it must return the **CakeSchedule** object.
-All schedules should be place inside a folder called **schedule**. This folder must reside at the root directory 
-where composer.json file is located.
+All schedules should be place inside a folder called **src/Shell/Schedule/**.
 
 For example:
 ```php
 // schdule/BackTasks.php
-$schedule = new \WatchOwl\CakeScheduler\Schedule\CakeSchedule();
+$schedule = new \CakeScheduler\Schedule\CakeSchedule();
 $schedule
     ->run('/usr/bin/php backup.php')
     ->daily()
@@ -109,7 +110,7 @@ To do something before a job is executed, we can use the *before()* hook:
 For example:
 
 ```php
-$schedule = new \WatchOwl\CakeScheduler\Schedule\CakeSchedule();
+$schedule = new \CakeScheduler\Schedule\CakeSchedule();
 
 $schedule
     ->run('/usr/bin/php backup.php')
@@ -128,7 +129,7 @@ To do something before a job is executed, we can use the *before()* hook:
 For example:
 
 ```php
-$schedule = new \WatchOwl\CakeScheduler\Schedule\CakeSchedule();
+$schedule = new \CakeScheduler\Schedule\CakeSchedule();
 
 $schedule
     ->run('/usr/bin/php backup.php')

@@ -70,9 +70,10 @@ class CakeSchedulerShell extends Shell
     }
     
     private function runCrunzCommand(InputInterface $input) {
-        setbase(ROOT);
+        //setbase(ROOT);
         define('CRUNZ_ROOT', ROOT . DS . 'vendor' . DS . 'lavary' . DS . 'crunz' . DS);
         $kernel = new Application('Crunz Command Line Interface', 'v1.4.0');
+
         $kernel->run($input);
     }
 }
